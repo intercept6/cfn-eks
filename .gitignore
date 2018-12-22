@@ -1,0 +1,7 @@
+aws-auth-cm.yaml
+.envrc
+.json.orig
+.kube
+landfill
+parameter-eks*.json
+envs
