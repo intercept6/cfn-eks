@@ -4,13 +4,13 @@
 
 ### クライアントサイド
 
-1. 実行ファイルを格納するディレクトリの作成とパス設定
+1. 実行ファイルを格納するディレクトリの作成とパス設定
    ```bash
    mkdir ~/bin
    echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
    source ~/.bash_profile
    ```
-2. kubectlのダウンロード
+2. kubectlのダウンロード
    ```bash
    curl -o ~/bin/eks-kubectl-1.10.3 https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-07-26/bin/darwin/amd64/kubectl
    curl -o ~/bin/eks-kubectl-1.11.5    https://amazon-eks.s3-us-west-2.amazonaws.com/1.11.   5/2018-12-06/bin/darwin/amd64/kubectl
@@ -48,7 +48,7 @@
    ./initial_eks_deploy.sh
    aws eks update-kubeconfig --name ${K8S_CLUSTER_NAME}
    ```
-4. ワーカーノードをクラスターと結合
+4. ワーカーノードをクラスターと結合
    ```bash
    curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2018-08-30/aws-auth-cm.yaml
    #  <ARN of instance role (not instance profile)>をインスタンスロールに置換
